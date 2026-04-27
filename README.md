@@ -1,59 +1,39 @@
-# RibbonWeb
+# 🎀 Ribbon Craft - เว็บไซต์แสดงผลงานริบบิ้น
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+โปรเจกต์เว็บไซต์สำหรับแสดงผลงานงานฝีมือจากริบบิ้น พัฒนาด้วย Angular 19 เน้นดีไซน์ที่ดูสะอาดตา สวยงาม และใช้งานง่ายทั้งบนคอมพิวเตอร์และมือถือ
 
-## Development server
+## ✨ สิ่งที่น่าสนใจในเว็บนี้
 
-To start a local development server, run:
+*   **ดีไซน์สวยงาม:** ใช้โทนสีชมพูพาสเทล ให้ความรู้สึกอ่อนหวานและเป็นกันเอง
+*   **แสดงผลงาน (Gallery):** รวมรูปภาพผลงานริบบิ้นกว่า 40 รูป พร้อมระบบจัดวางที่ดูง่าย
+*   **รองรับมือถือ:** หน้าเว็บปรับขนาดให้เหมาะสมอัตโนมัติเมื่อเปิดดูผ่านสมาร์ทโฟน
+*   **เมนูใช้งานง่าย:** มีระบบเมนูที่ลื่นไหลและดูทันสมัย
 
-```bash
-ng serve
-```
+## 🛠 เทคโนโลยีที่ใช้
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+*   **Angular 19:** เฟรมเวิร์คหลักในการสร้างเว็บ
+*   **SCSS:** สำหรับตกแต่งหน้าตาเว็บไซต์
+*   **Google Fonts:** ใช้ฟอนต์ Playfair Display และ Roboto
+*   **Material Icons:** สำหรับไอคอนต่างๆ ในเว็บ
 
-## Code scaffolding
+## 📂 โครงสร้างโปรเจกต์
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+*   `src/app/pages`: เก็บหน้าหลัก (หน้าแรก และ หน้าผลงาน)
+*   `src/app/components`: เก็บส่วนประกอบที่ใช้ซ้ำ (เมนูด้านบน และ ส่วนท้ายเว็บ)
+*   `src/assets/images`: โฟลเดอร์เก็บรูปภาพผลงานทั้งหมด
 
-```bash
-ng generate component component-name
-```
+## 🚀 วิธีรันโปรเจกต์
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. ติดตั้ง Dependencies (ทำครั้งแรกครั้งเดียว):
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate --help
-```
+2. เริ่มรันเว็บไซต์:
+   ```bash
+   ng serve
+   ```
+   จากนั้นเปิดไปที่เว็บ `http://localhost:4200`
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+จัดทำขึ้นเพื่อแสดงผลงานงานฝีมือจากริบบิ้น ❤️
