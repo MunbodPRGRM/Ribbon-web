@@ -1,0 +1,184 @@
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(216, 112, 147, 0.1);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #ffe4e1; // MistyRose accent
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .logo {
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #d87093; // PaleVioletRed
+      font-weight: 700;
+      font-size: 1.6rem;
+      gap: 12px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .ribbon-icon {
+        font-size: 2rem;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+      }
+
+      .site-title {
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  .nav {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 32px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: #666;
+          font-weight: 500;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+          position: relative;
+          padding: 5px 0;
+
+          &:hover, &.active {
+            color: #d87093;
+          }
+
+          &.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #ffb6c1; // LightPink
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem 0;
+
+    .container {
+      flex-direction: row; // Keep logo and hamburger on the same line
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* Hamburger Icon */
+    .nav-toggle-label {
+      display: block;
+      cursor: pointer;
+      padding: 1rem;
+      
+      span,
+      span::before,
+      span::after {
+        display: block;
+        background: #d87093;
+        height: 2px;
+        width: 25px;
+        border-radius: 2px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      span::before,
+      span::after {
+        content: '';
+        position: absolute;
+      }
+
+      span::before { bottom: 8px; }
+      span::after { top: 8px; }
+    }
+
+    /* Mobile Menu Styling */
+    .nav {
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+      background: #fff;
+
+      ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+
+        li {
+          width: 100%;
+          text-align: center;
+          
+          a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid #fff5f6;
+
+            &.active::after {
+              display: none; // Remove bottom bar on mobile
+            }
+          }
+        }
+      }
+    }
+
+    /* Logic to show menu when checkbox is checked */
+    .nav-toggle:checked ~ .nav {
+      max-height: 300px;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span {
+      background: transparent;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span::after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+
+    .logo a {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+/* Hide checkbox and label on desktop */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+}

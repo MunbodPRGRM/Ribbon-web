@@ -1,0 +1,29 @@
+<div class="gallery-page">
+  <section class="gallery-header">
+    <div class="container">
+      <h1>คลังผลงานของเรา</h1>
+      <p>รวมรวบผลงานความภาคภูมิใจจากริบบิ้นหลากหลายรูปแบบ</p>
+    </div>
+  </section>
+
+  <section class="gallery-grid-section">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let img of images">
+          <div class="image-wrapper">
+            <img [src]="img.url" [alt]="img.title" loading="lazy" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <!-- กล่องสำรองกรณีรูปไม่แสดง -->
+            <div class="image-placeholder" style="display: none;">
+              <span class="material-icons">image_not_supported</span>
+              <p>ไม่พบรูป {{img.id}}.jpg</p>
+            </div>
+            <div class="image-overlay">
+              <span>{{ img.title }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
